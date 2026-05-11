@@ -57,21 +57,3 @@ if st.button("Predict Quantity"):
 
     st.write("Input used for prediction:")
     st.dataframe(input_df)
-
- 
-
- 
-
- 
-
- 
-
- 
-
-requirements.txt
-
- 
-
-pandas
-scikit-learn
-streamlit
