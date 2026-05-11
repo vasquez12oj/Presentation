@@ -68,7 +68,7 @@ if st.button("Predict Quantity"):
 
  
 
-Requirements.txt
+requirements.txt
 
  
 
