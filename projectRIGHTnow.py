@@ -204,7 +204,7 @@ models = {
 
 for name, model in models.items    ():
 
-model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
 preds = model.predict(X_test)
 
