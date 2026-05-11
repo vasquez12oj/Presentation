@@ -9,19 +9,12 @@ import pandas as pd
 
 
 from sklearn.model_selection import train_test_split
-
 from sklearn.compose import ColumnTransformer
-
 from sklearn.preprocessing import OneHotEncoder
-
 from sklearn.pipeline import Pipeline
-
 from sklearn.linear_model import LinearRegression
-
 from sklearn.ensemble import RandomForestRegressor, VotingRegressor
-
 from sklearn.svm import SVR
-
 from sklearn.metrics import mean_squared_error
 
 
@@ -55,60 +48,23 @@ data["year"] = data["PO Date"].dt.year
 
 
 # -----------------------------
-
 # 3. Define X and y
-
 # -----------------------------
-
 target_col = "Bill Qty"
 
-
-
-feature_cols = [
-
-"day",
-
-"month",
-
-"year",
-
-"Brand Name",
-
-"Material Family"
-
-]
-
-
+feature_cols = ["day", "month", "year", "Brand Name", "Material Family"]
 
 X = data[feature_cols]
-
 y = data[target_col]
-
-
-
 # -----------------------------
-
 # 4. Identify column types
-
 # -----------------------------
-
 numeric_features = ["day", "month", "year"]
-
 categorical_features = ["Brand Name", "Material Family"]
-
-
-
 preprocessor = ColumnTransformer(
-
 transformers=[
-
 ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
-
-("num", "passthrough", numeric_features)
-
-]
-
-)
+("num", "passthrough", numeric_features))
 
 
 
