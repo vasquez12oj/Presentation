@@ -220,17 +220,17 @@ print(f"{name} MSE: {mse:.4f}")
 
 # --------    ---------------------
 
-wit    h open("predicted_sales_model.pkl", "wb") as f:
+with open("predicted_sales_model.pkl", "wb") as f:
 
-pickle.dump({
+    pickle.dump({
     
-"model": voting_model,
+    "model": voting_model,
 
-"features": feature_cols,
+    "features": feature_cols,
 
-"brand_options": sorted(data["Brand Name"].dropna().unique()),
+    "brand_options": sorted(data["Brand Name"].dropna().unique()),
 
-"material_options": sorted(data["Material Family"].dropna().unique())
+    "material_options": sorted(data["Material Family"].dropna().unique())
 
 }, f)
 
