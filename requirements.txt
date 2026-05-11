@@ -1,3 +1,7 @@
 pandas
 scikit-learn
 streamlit
+numpy
+xgboost
+Pillow
+pickle
