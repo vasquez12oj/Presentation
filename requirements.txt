@@ -4,4 +4,3 @@ streamlit
 numpy
 xgboost
 Pillow
-pickle
